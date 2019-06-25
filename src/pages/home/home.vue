@@ -1,8 +1,8 @@
 <template>
   <div class="home-wrapper">
-  	<div>
+  	<p>
   		Homepage wrapper
-  	</div>
+  	</p>
   </div>
 </template>
 

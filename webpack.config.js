@@ -5,7 +5,14 @@ module.exports = {
   entry: './src/app/index.js',
   module: {
     rules: [
-      { test: /\.js$/, use: 'babel-loader' },
+      { test: /\.js$/, use: {
+        loader: "babel-loader",
+        options: {
+            plugins: [
+                "@babel/plugin-syntax-dynamic-import"
+            ]
+        }
+      } },
       { test: /\.vue$/, use: 'vue-loader' },
       { test: /\.scss$/, use: ['style-loader',  'css-loader',  'sass-loader']},
     ]

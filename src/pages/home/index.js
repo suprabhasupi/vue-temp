@@ -1,2 +1,2 @@
 import Homepage from './home.vue'
-module.exports = Homepage
+export default Homepage
