@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/app/index.js',
@@ -13,8 +14,7 @@ module.exports = {
             ]
         }
       } },
-      { test: /\.vue$/, use: 'vue-loader' },
-      { test: /\.scss$/, use: ['style-loader',  'css-loader',  'sass-loader']},
+      { test: /\.vue$/, use: 'vue-loader' }
     ]
   },
   devServer: {
@@ -25,5 +25,9 @@ module.exports = {
       template: './src/index.html',
     }),
     new VueLoaderPlugin(),
-  ]
+  ],
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: "[name].[contentHash].js"
+  }
 };
