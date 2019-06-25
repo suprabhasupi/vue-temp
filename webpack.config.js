@@ -17,6 +17,9 @@ module.exports = {
       { test: /\.scss$/, use: ['style-loader',  'css-loader',  'sass-loader']},
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
