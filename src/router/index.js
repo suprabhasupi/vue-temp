@@ -13,7 +13,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "page-home" */ '../pages/home')
     },
     {
-      path: '/',
+      path: '*',
       name: 'PageNotFound',
       component: () => import(/* webpackChunkName: "page-404" */ '../pages/no-found')
     }
