@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import App from './app.vue'
 // import store from '~/store'
-// import router from '~/router'
+import router from '../router'
 
 Vue.config.productionTip = false
 Vue.performance = true
@@ -14,7 +14,7 @@ Promise.resolve(window.fetch).then(() => {
   new Vue({
     el: '#app',
     // store,
-    // router,
+    router,
     render: h => h(App)
   })
 })
